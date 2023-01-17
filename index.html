@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Ciortan Serena" />
+    <meta name="revised" content="Formular, 17/01/2023" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Formular</title>
+  </head>
+  <body>
+    <div class="myDiv">
+      <h1>Formular de angajare</h1>
+    </div>
+
+    <br />
+    <br />
+
+    <form>
+      <div>
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume" name="nume" required />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="prenume">Prenume:</label>
+        <input type="text" id="prenume" name="prenume" required />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="age">Vârsta:</label>
+        <input type="number" id="age" name="age" min="18" max="60" required />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="age">Data nașterii:</label>
+        <input type="date" id="date" name="date" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="pin">CNP:</label><br />
+        <input
+          type="text"
+          id="pin"
+          name="pin"
+          maxlength="13"
+          size="13"
+          required
+        />
+      </div>
+
+      <br />
+
+      <div>
+        Gen:
+        <input type="radio" id="gen_feminin" name="gen" value="feminin" />
+        <label for="gen_feminin">Feminin</label>
+        <input type="radio" id="gen_masculin" name="gen" value="masculin" />
+        <label for="gen_masculin">Masculin</label>
+      </div>
+
+      <br />
+
+      <div>
+        <label for="nume">Naționalitate:</label>
+        <input type="text" id="nume" name="nume" required />
+      </div>
+
+      <br />
+
+      <div class="adresa">
+        <fieldset>
+          <legend>Adresa</legend>
+          <input type="text" name="strada" placeholder="Strada" required />
+          <input type="number" name="nr" min="1" placeholder="Nr." required />
+          <input type="text" name="bloc" placeholder="Bloc" required />
+          <input type="text" name="scara" placeholder="Scara" disabled />
+          <input type="text" name="ap" placeholder="Ap." required />
+          <select name="jud" id="jud">
+            <option value="">Selectați județul</option>
+            <option value="BH">Bihor</option>
+            <option value="CJ">Cluj-Napoca</option>
+            <option value="IF">Ilfov</option>
+            <option value="BV">Brașov</option>
+            <option value="CT">Constanța</option>
+          </select>
+
+          <input
+            type="text"
+            name="oraș"
+            id="oraș"
+            placeholder="Oraș"
+            list="orașe"
+            required
+          />
+          <datalist id="orașe">
+            <option value="Oradea"></option>
+            <option value="Cluj-Napoca"></option>
+            <option value="București"></option>
+            <option value="Brașov"></option>
+            <option value="Constanța"></option>
+            <option value="Arad"></option>
+            <option value="Deva"></option>
+          </datalist>
+        </fieldset>
+      </div>
+
+      <br />
+
+      <div class="date">
+        <fieldset>
+          <legend>Date de contact:</legend>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br /><br />
+          <label for="phone">Telefon:</label>
+          <input type="tel" id="phone" name="phone" required />
+        </fieldset>
+      </div>
+
+      <br />
+      <br />
+
+      <div>
+        <label for="studi">Educație:</label>
+        <select name="studi" id="studi">
+          <option value="">Selectați tipul de învățământ</option>
+          <optgroup label="Studii medii:">
+            <option value="postliceal">Învățământ secundar superior</option>
+            <option value="nonuniversitar">Învățământ post-liceal</option>
+          </optgroup>
+          <optgroup label="Studii superioare:">
+            <option value="licenta">Studii universitare de licenta</option>
+            <option value="master">Studii universitare de master</option>
+            <option value="doctorat">Studii universitare de doctorat</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <br />
+
+      <div>
+        Tipuri de limbi străini cunoscute și nivelul de cunoastere al acestora:
+        <ol>
+          <li>Engleză</li>
+          <input type="checkbox" id="limba" name="limba" value="incepator" />
+          <label for="limba">începător</label
+          ><br />
+          <input type="checkbox" id="limba" name="limba" value="intermadiar" />
+          <label for="limba">intermediar</label
+          ><br />
+          <input type="checkbox" id="limba" name="limba" value="avansat" />
+          <label for="limba">avansat</label
+          ><br />
+          <li>Germană</li>
+          <input type="checkbox" id="limba" name="limba" value="incepator" />
+          <label for="limba">începător</label
+          ><br />
+          <input type="checkbox" id="limba" name="limba" value="intermadiar" />
+          <label for="limba">intermediar</label
+          ><br />
+          <input type="checkbox" id="limba" name="limba" value="avansat" />
+          <label for="limba">avansat</label
+          ><br />
+          <li>Altele</li>
+          <input type="text" />
+        </ol>
+      </div>
+    </form>
+
+    <br />
+
+    <div>
+      <label for="descriere">În ce domenii ați mai lucrat?</label>
+      <textarea
+        name="descriere"
+        id="descriere"
+        cols="20"
+        rows="3"
+        required
+      ></textarea>
+    </div>
+
+    <br />
+
+    <div>
+      Atașați o poza.<br />
+      <label for="myfile">Atașați aici:</label>
+      <input type="file" id="myfile" name="myfile" />
+    </div>
+
+    <br />
+
+    <div>
+      <label for="descriere"
+        >Competenţe personale (cunoştinţe, abilităţi, aptitudini):</label
+      >
+      <textarea
+        name="descriere"
+        id="descriere"
+        cols="25"
+        rows="4"
+        placeholder="Descriere:"
+        required
+      ></textarea>
+    </div>
+
+    <br />
+
+    <div>
+      <button
+        class="buton1"
+        onclick="alert('Felicitări, ați completat cu succes formularul')"
+      >
+        Verificare formular!
+      </button>
+    </div>
+
+    <br />
+
+    <div>
+      <button class="buton2">Trimite</button>
+      <button class="buton3">Resetare</button>
+    </div>
+  </body>
+</html>
